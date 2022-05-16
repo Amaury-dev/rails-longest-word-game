@@ -1,0 +1,8 @@
+<p> <%= @letters  %> </p>
+
+<form action="/score" method = "post" >
+  <input type="text" name="response">
+  <input type="submit" value="Ask!">
+  <input type="hidden" name="letters" value= "<%=@letters%>">
+  <%=hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
